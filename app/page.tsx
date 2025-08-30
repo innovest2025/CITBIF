@@ -524,6 +524,7 @@ export default function Home() {
     ]
 
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] text-gray-800 overflow-x-hidden">
       {/* Header */}
       <Navbar />
@@ -949,113 +950,168 @@ export default function Home() {
       </section>
 
       {/* Success Formula - Circular Layout */}
-      <section className="bg-gradient-to-br from-white via-gray-50 to-slate-100 py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/success-pattern.png')] opacity-5 animate-pulse"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          {/* Header */}
-          <div className="text-center mb-24 scroll-animate">
-            <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 bg-clip-text text-transparent relative inline-block">
-              Why CITBIF?
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-[#af363c] to-[#8b2635] rounded-full animate-scale-in"></div>
-            </h2>
-            <p className="text-slate-600 text-xl max-w-3xl mx-auto mt-8 font-medium">Discover what makes us the preferred choice for innovation and entrepreneurship</p>
+      {/* Success Formula - Circular Layout */}
+<section className="bg-gradient-to-br from-white via-gray-50 to-slate-100 py-32 relative overflow-hidden">
+  <div className="absolute inset-0 bg-[url('/success-pattern.png')] opacity-5 animate-pulse"></div>
+  <div className="container mx-auto px-4 relative z-10">
+    {/* Header */}
+    <div className="text-center mb-24 scroll-animate">
+      <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 bg-clip-text text-transparent relative inline-block">
+        Why CITBIF?
+        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-[#af363c] to-[#8b2635] rounded-full animate-scale-in"></div>
+      </h2>
+      <p className="text-slate-600 text-xl max-w-3xl mx-auto mt-8 font-medium">
+        Discover what makes us the preferred choice for innovation and entrepreneurship
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
+      {[
+        {
+          name: "STARTUP-CENTRIC ECOSYSTEM",
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          ),
+        },
+        {
+          name: "MENTORSHIP FROM EXPERTS",
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5 12.083 12.083 0 015.84 10.578L12 14z" />
+            </svg>
+          ),
+        },
+        {
+          name: "END-TO-END SUPPORT",
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M14 12h6m-6 0H4m10 0a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          ),
+        },
+        {
+          name: "STATE-OF-THE-ART INFRASTRUCTURE",
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6m-6 6v6m-4-6v6m-4-6v6m16-6v6" />
+            </svg>
+          ),
+        },
+        {
+          name: "OPPORTUNITIES FOR COLLABORATION",
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+          ),
+        },
+        {
+          name: "PROVEN TRACK RECORD",
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m-7 4h8a2 2 0 002-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v7a2 2 0 002 2z" />
+            </svg>
+          ),
+        },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="relative group w-44 h-44 md:w-52 md:h-52 bg-gradient-to-br from-white via-gray-50 to-slate-100 text-slate-900 rounded-[30px] p-4 flex flex-col items-center justify-center transition-all duration-500 ease-in-out hover:scale-110 cursor-pointer hover:shadow-2xl hover:shadow-[#af363c]/40"
+          style={{
+            boxShadow: "0 0 10px #e2e8f0, 0 0 20px #f8fafc, 0 0 30px #e2e8f0",
+          }}
+        >
+          {/* Glow Border Layer - Very Slow Pulse */}
+          <div className="absolute inset-0 rounded-[30px] border border-[#af363c]/40 blur-sm opacity-40 group-hover:opacity-80 group-hover:border-[#af363c]/60 transition-all duration-300 animate-slow-pulse pointer-events-none"></div>
+
+          {/* Enhanced Glow on Hover */}
+          <div className="absolute inset-0 rounded-[30px] bg-gradient-to-r from-[#af363c]/0 via-[#8b2635]/0 to-[#af363c]/0 group-hover:from-[#af363c]/10 group-hover:via-[#8b2635]/20 group-hover:to-[#af363c]/10 transition-all duration-500 pointer-events-none"></div>
+
+          {/* Shine overlay - Very Slow Pulse */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:via-white/40 animate-slow-pulse bg-[length:200%_100%] rounded-[30px] transition-all duration-300 pointer-events-none"></div>
+
+          <div className="z-10 mb-3 group-hover:scale-110 transition-transform duration-300 text-[#af363c]">
+            {item.icon}
           </div>
-
-          {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 place-items-center">
-            {[
-              { name: "STARTUP-CENTRIC ECOSYSTEM", icon: "🚀" },
-              { name: "MENTORSHIP FROM EXPERTS", icon: "🧠" },
-              { name: "END-TO-END SUPPORT", icon: "🤝" },
-              { name: "STATE-OF-THE-ART INFRASTRUCTURE", icon: "🏭" },
-              { name: "OPPORTUNITIES FOR COLLABORATION", icon: "🔄" },
-              { name: "PROVEN TRACK RECORD", icon: "🏆" },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="relative group w-44 h-44 md:w-52 md:h-52 bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#3a3a3a] text-white rounded-[30px] p-4 flex flex-col items-center justify-center transition-all duration-500 ease-in-out hover:scale-110  cursor-pointer hover:shadow-2xl hover:shadow-orange-300/50"
-                style={{
-                  boxShadow: "0 0 10px #FF6B35, 0 0 20px #FFB347, 0 0 30px #FF6B35",
-                }}
-              >
-                {/* Glow Border Layer - Very Slow Pulse */}
-                <div className="absolute inset-0 rounded-[30px] border border-orange-400 blur-sm opacity-60 group-hover:opacity-100 group-hover:border-orange-300 transition-all duration-300 animate-slow-pulse pointer-events-none"></div>
-
-                {/* Enhanced Glow on Hover */}
-                <div className="absolute inset-0 rounded-[30px] bg-gradient-to-r from-orange-400/0 via-orange-300/0 to-orange-400/0 group-hover:from-orange-400/20 group-hover:via-orange-300/30 group-hover:to-orange-400/20 transition-all duration-500 pointer-events-none"></div>
-
-                {/* Shine overlay - Very Slow Pulse */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-white/20 animate-slow-pulse bg-[length:200%_100%] rounded-[30px] transition-all duration-300 pointer-events-none"></div>
-
-                <div className="z-10 text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {item.icon}
-                </div>
-                <h3 className="text-center font-semibold text-sm md:text-base text-white z-10 group-hover:text-orange-100 transition-colors duration-300">
-                  {item.name}
-                </h3>
-              </div>
-            ))}
-          </div>
+          <h3 className="text-center font-semibold text-sm md:text-base text-slate-900 z-10 group-hover:text-[#af363c] transition-colors duration-300">
+            {item.name}
+          </h3>
         </div>
-        <style jsx>{`
-          @keyframes slow-pulse {
-            0%,
-            100% {
-              opacity: 0.6;
-            }
-            50% {
-              opacity: 1;
-            }
-          }
-
-          .animate-slow-pulse {
-            animation: slow-pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          }
-        `}</style>
-      </section>
+      ))}
+    </div>
+  </div>
+  <style jsx>{`
+    @keyframes slow-pulse {
+      0%, 100% {
+        opacity: 0.6;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+    .animate-slow-pulse {
+      animation: slow-pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  `}</style>
+</section>
 
       {/* How CITBIF adds values - Pill Layout */}
       <section className="bg-gradient-to-br from-white via-gray-50 to-slate-100 py-32 scroll-animate relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-24 scroll-animate">
-            <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 bg-clip-text text-transparent relative inline-block">
-              Services Provided by CITBIF
-              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-[#af363c] to-[#8b2635] rounded-full animate-scale-in"></div>
-            </h2>
-            <p className="text-slate-600 text-xl max-w-3xl mx-auto mt-8 font-medium">Comprehensive support services to accelerate your innovation journey</p>
-          </div>
+  <div className="container mx-auto px-4">
+    {/* Header */}
+    <div className="text-center mb-24 scroll-animate">
+      <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 bg-clip-text text-transparent relative inline-block">
+        Services Provided by CITBIF
+        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-[#af363c] to-[#8b2635] rounded-full animate-scale-in"></div>
+      </h2>
+      <p className="text-slate-600 text-xl max-w-3xl mx-auto mt-8 font-medium">
+        Comprehensive support services to accelerate your innovation journey
+      </p>
+    </div>
 
-          {/* Enhanced Service Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {[
-              { name: "Co Working Space", icon: "👥" },
-              { name: "IP/TM Support", icon: "📜" },
-              { name: "Mentorship", icon: "🧠" },
-              { name: "Maker Lab", icon: "🛠️" },
-              { name: "Innovation Grant", icon: "💵" },
-              { name: "Hardware & Software", icon: "💻" },
-              { name: "Technological Infrastructure", icon: "🏗️" },
-              { name: "Investor Connect", icon: "🤝" },
-            ].map((value, index) => (
-              <div
-                key={index}
-                className={`bg-gradient-to-br from-slate-50 via-white to-gray-50 backdrop-blur-sm p-8 rounded-3xl border border-[#af363c]/30 hover:border-[#af363c]/60 transition-all duration-500 group shadow-xl hover:shadow-[#af363c]/25 hover:scale-105 scroll-animate stagger-${
-                  (index % 6) + 1
-                } relative overflow-hidden`}
+    {/* Enhanced Service Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      {[
+              { name: "Co Working Space", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
+              { name: "IP/TM Support", icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
+              { name: "Mentorship", icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" },
+              { name: "Maker Lab", icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z" },
+              { name: "Innovation Grant", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+              { name: "Hardware & Software", icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
+              { name: "Technological Infrastructure", icon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" },
+              { name: "Investor Connect", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" },
+      ].map((value, index) => (
+        <div
+          key={index}
+          className={`bg-gradient-to-br from-slate-50 via-white to-gray-50 backdrop-blur-sm p-8 rounded-3xl border border-[#af363c]/30 hover:border-[#af363c]/60 transition-all duration-500 group shadow-xl hover:shadow-[#af363c]/25 hover:scale-105 scroll-animate stagger-${
+            (index % 6) + 1
+          } relative overflow-hidden`}
+        >
+          {/* Enhanced Background Glow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#af363c]/5 to-[#8b2635]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+
+          <div className="flex flex-col items-center text-center gap-4 relative z-10">
+            <div className="w-16 h-16 bg-gradient-to-br from-[#af363c] to-[#8b2635] rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#af363c]/80 group-hover:to-[#8b2635]/80 transition-all duration-500 group-hover:scale-125 shadow-lg">
+              {/* SVG instead of raw path string */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                {/* Enhanced Background Glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#af363c]/5 to-[#8b2635]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-
-                <div className="flex flex-col items-center text-center gap-4 relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#af363c] to-[#8b2635] rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#af363c]/80 group-hover:to-[#8b2635]/80 transition-all duration-500 group-hover:scale-125  shadow-lg">
-                    <div className="text-3xl transition-transform duration-300 group-hover:scale-110 text-white">{value.icon}</div>
-                  </div>
-                  <h3 className="text-base font-bold text-slate-800 group-hover:text-[#af363c] transition-all duration-300 group-hover:scale-105 leading-tight">
-                    {value.name}
-                  </h3>
-                </div>
-              </div>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={value.icon} />
+              </svg>
+            </div>
+            <h3 className="text-base font-bold text-slate-800 group-hover:text-[#af363c] transition-all duration-300 group-hover:scale-105 leading-tight">
+              {value.name}
+            </h3>
+          </div>
+        </div>
             ))}
           </div>
         </div>
@@ -2053,5 +2109,6 @@ export default function Home() {
         </button>
       )}
     </div>
+    </>
   )
 }
