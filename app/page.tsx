@@ -641,14 +641,13 @@ export default function Home() {
                     <span className="text-3xl">🚀</span>
                   </div>
                   <p className="text-slate-700 leading-relaxed text-xl font-medium group-hover:text-slate-900 transition-colors duration-300">
-                    The Chennai Institute Technology Business Incubation Forum (CITBIF), a Section 8 Company,
-                    operates under the brand name Chennai Institute of Technology Innovation Labs (CITIL). It is
-                    committed to fostering entrepreneurship by providing mentorship, advanced technology, and dedicated
-                    Centres of Excellence (COEs) for deep tech product development. CITIL offers essential funding and
-                    all-round support to help transform ideas into successful businesses. Its key focus areas include
-                    AI/ML, IoT, and other forward-thinking, sustainable initiatives. CITIL is devoted to empowering
-                    startups to succeed in the market by combining innovation, technology, and strong support to drive
-                    entrepreneurial growth.
+                    The Chennai Institute Technology Business Incubation Forum (CITBIF), 
+                    a Section 8 Company, operates under the brand name Chennai Institute 
+                    of Technology Innovation Labs (CITIL). It is committed to fostering 
+                    entrepreneurship by providing mentorship, advanced technology, and 
+                    dedicated Centres of Excellence (COEs) for deep tech product development. 
+                    CITIL is devoted to empowering startups to succeed in the market by 
+                    combining innovation, technology, and strong support to drive entrepreneurial growth.
                   </p>
                 </div>
               </div>
@@ -707,13 +706,7 @@ export default function Home() {
                       The Chennai Institute Technology Business Incubation Forum (CITBIF) is a Section 8 Company that
                       operates under the brand name Chennai Institute of Technology Innovation Labs (CITIL).
                     </p>
-                    <p
-                      className="transform hover:translate-x-2 transition-transform duration-300"
-                      style={{ transitionDelay: "0.1s" }}
-                    >
-                      We are committed to fostering entrepreneurship by providing mentorship, advanced technology, and
-                      dedicated Centres of Excellence (COEs) for deep tech product development.
-                    </p>
+                    
                     <p
                       className="transform hover:translate-x-2 transition-transform duration-300"
                       style={{ transitionDelay: "0.2s" }}
@@ -723,7 +716,7 @@ export default function Home() {
                       initiatives.
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-8 mt-12">
+                  <div className="grid grid-cols-2 grid-rows-3 gap-8 mt-12">
                   {[
                     { icon: Target, title: "Mission Driven", desc: "Focused on societal impact" },
                     { icon: Lightbulb, title: "Innovation First", desc: "Cutting-edge technology solutions" },
@@ -816,9 +809,9 @@ export default function Home() {
 
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="flex items-start gap-6 flex-1">
-                    <div className="bg-gradient-to-br from-[#af363c]/30 to-[#8b2635]/30 p-6 rounded-2xl group-hover:from-[#af363c]/50 group-hover:to-[#8b2635]/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 flex-shrink-0 shadow-xl backdrop-blur-sm border border-[#af363c]/30">
+                    <div className="bg-gradient-to-br from-[#af363c]/30 to-[#8b2635]/30 p-6 rounded-2xl group-hover:from-[#af363c]/50 group-hover:to-[#8b2635]/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-0 flex-shrink-0 shadow-xl backdrop-blur-sm border border-[#af363c]/30">
                       <svg
-                        className="w-12 h-12 text-[#af363c] transition-all duration-500 group-hover:rotate-12 group-hover:scale-125 filter drop-shadow-lg group-hover:text-white"
+                        className="w-12 h-12 text-[#af363c] transition-all duration-500 group-hover:rotate-0 group-hover:scale-125 filter drop-shadow-lg group-hover:text-white"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -900,7 +893,7 @@ export default function Home() {
       </section>
 
       {/* Focus Areas - Horizontal Slider */}
-      <section className="bg-gradient-to-br from-white via-gray-50 to-slate-100 py-32 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-white via-gray-50 to-slate-100  relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/tech-pattern.png')] opacity-5 animate-pulse"></div>
         <div className="container mx-auto px-4 relative z-10">
           {/* Header */}
@@ -924,19 +917,30 @@ export default function Home() {
               { icon: "🌱", name: "Sustainable Technology", description: "Green tech and renewable energy solutions" },
               { icon: "🏥", name: "Healthcare Innovation", description: "Medical technology and digital health" }
             ].map((area, index) => (
-              <div key={index} className="group">
-                <div className="bg-gradient-to-br from-slate-50 via-white to-gray-50 rounded-2xl border-2 border-[#af363c]/30 hover:border-[#af363c]/60 p-8 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 text-center h-64 flex flex-col justify-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#af363c] to-[#8b2635] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <div className="text-3xl">{area.icon}</div>
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-800 mb-3 group-hover:text-[#af363c] transition-colors duration-300">
-                    {area.name}
-                  </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
-                    {area.description}
-                  </p>
+              <div
+              key={index}
+              className="group"
+            >
+              <div className="bg-gradient-to-br from-slate-50 via-white to-gray-50 rounded-2xl 
+                              border-2 border-[#af363c]/30 hover:border-[#af363c]/60 p-8 
+                              shadow-xl hover:shadow-2xl transition-all duration-500 
+                              text-center h-64 flex flex-col justify-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#af363c] to-[#8b2635] 
+                                rounded-2xl flex items-center justify-center mx-auto mb-4 
+                                shadow-lg">
+                  <div className="text-3xl">{area.icon}</div>
                 </div>
+                <h3 className="text-lg font-bold text-slate-800 mb-3 
+                              group-hover:text-[#af363c] transition-colors duration-300">
+                  {area.name}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed 
+                              group-hover:text-slate-700 transition-colors duration-300">
+                  {area.description}
+                </p>
               </div>
+            </div>
+
             ))}
           </div>
         </div>
@@ -969,7 +973,7 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="relative group w-44 h-44 md:w-52 md:h-52 bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#3a3a3a] text-white rounded-[30px] p-4 flex flex-col items-center justify-center transition-all duration-500 ease-in-out hover:scale-110 hover:rotate-[2deg] cursor-pointer hover:shadow-2xl hover:shadow-orange-300/50"
+                className="relative group w-44 h-44 md:w-52 md:h-52 bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#3a3a3a] text-white rounded-[30px] p-4 flex flex-col items-center justify-center transition-all duration-500 ease-in-out hover:scale-110  cursor-pointer hover:shadow-2xl hover:shadow-orange-300/50"
                 style={{
                   boxShadow: "0 0 10px #FF6B35, 0 0 20px #FFB347, 0 0 30px #FF6B35",
                 }}
@@ -1044,7 +1048,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-[#af363c]/5 to-[#8b2635]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
 
                 <div className="flex flex-col items-center text-center gap-4 relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#af363c] to-[#8b2635] rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#af363c]/80 group-hover:to-[#8b2635]/80 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#af363c] to-[#8b2635] rounded-2xl flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#af363c]/80 group-hover:to-[#8b2635]/80 transition-all duration-500 group-hover:scale-125  shadow-lg">
                     <div className="text-3xl transition-transform duration-300 group-hover:scale-110 text-white">{value.icon}</div>
                   </div>
                   <h3 className="text-base font-bold text-slate-800 group-hover:text-[#af363c] transition-all duration-300 group-hover:scale-105 leading-tight">
